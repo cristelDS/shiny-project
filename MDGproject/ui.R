@@ -7,17 +7,18 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel(title = h3("Millennium Development Goals Indicators", align = "left")),
+  titlePanel(title = h3("Millennium Development Goals (MDG) Indicators", align = "left")),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(position = "right",
     sidebarPanel(h4("How have MDG Indicators evolved throughout the years?"), 
                  br(),
-                 sliderInput("slideyear", "Select the year", min = 1997, max = 2007, value = 1997, sep = "", step = 1 , animate = T),
+                 sliderInput("slideyear", "Select the year", min = 1997, max = 2007, value = 1997, sep = "", step = 1, animate = T),
                  br(),
                  selectInput("selectindic", "Select the Indicator", choices = indic, selected = indic[1], multiple = T)),
     
-    mainPanel(h4("Visual of progress of the different MDG indicators"), 
+    mainPanel(h5("Visual of progress of the different MDG indicators"), 
+              h5("The graph below shows how the indicators have changed over time, from 1997 to 2007 in all countries over the world."),
               textOutput("selecyear"),
               plotOutput("myplot"),
               br(),
