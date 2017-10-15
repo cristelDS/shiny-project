@@ -1,5 +1,5 @@
 #author: Cristel Santos
-#date: 14 Oct 2017
+#date created: 14 Oct 2017
 
 library(shiny)
 
