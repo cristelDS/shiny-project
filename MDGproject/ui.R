@@ -1,7 +1,6 @@
 #author: Cristel Santos
 #date created: 14 Oct 2017
 
-
 library(shiny)
 
 # Define UI for application that draws a histogram
