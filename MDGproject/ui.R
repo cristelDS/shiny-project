@@ -15,7 +15,7 @@ shinyUI(fluidPage(
                  br(),
                  sliderInput("slideyear", "Select the year", min = 1997, max = 2007, value = 1997, sep = "", step = 1, animate = T),
                  br(),
-                 selectInput("selectindic", "Select the Indicator", choices = indic, selected = indic[1], multiple = T)),
+                 selectInput("selectindic", "Select the Indicator", choices = unique(as.character(dat$serieName)), multiple = T)),
     
     mainPanel(
         tabsetPanel(
@@ -50,7 +50,22 @@ shinyUI(fluidPage(
                       )
                   ),
 
-          tabPanel("sample data", "some data here")))
+          tabPanel("App improvements?", 
+                   br(),
+                   h5("These are some considerations had while developping this app in where to take this next."),
+                   tags$p(h5("_______________________________________________")),
+                   tags$ol(
+                     tags$li("Add option to upload or read from external source"),
+                     tags$li("Some countries have no information on their indicators for some years where 
+                             the data is scarse. Missing data needs to be considered and highling this."),
+                     tags$li("Hover over data points to show which country and indicator"),
+                     tags$li("...."),
+                     tags$li("...."),
+                     tags$li("...."),
+                     tags$li("...."),
+                     tags$li("....")
+                   )
+                   )))
     )
   
   )
