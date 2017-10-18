@@ -52,14 +52,14 @@ shinyUI(fluidPage(
 
           tabPanel("App improvements?", 
                    br(),
-                   h5("These are some considerations had while developping this app as to what improvements could be made."),
+                   h5("While developing this app, I have considered ways of improving this further in the future."),
                    tags$p(h5("_______________________________________________")),
                    tags$ol(
                      tags$li("Add sample data in a separate tab. This should be with the ability to filter."),
                      tags$li("Add option to upload or read data from external source (dropbox or other)."),
                      tags$li("Add option to download the results (graphs & data."),
-                     tags$li("Some countries have no information on their indicators for some years. 
-                              Deal with missing data, perhaps by displaying a list of countries with no data
+                     tags$li("Some countries have no information for the indicators for a number of years. 
+                              I will need to deal with missing data, perhaps by displaying a list of countries with no data
                               for the selected year."),
                      tags$li("Hover over data points to show which country and indicator. Might need to change 
                              the type of boxplot used"),
