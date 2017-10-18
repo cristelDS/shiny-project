@@ -31,7 +31,8 @@ shinyServer(function(input, output) {
           theme_set(theme_minimal()) +    
           theme(axis.title.y = element_blank()) +
           scale_y_continuous(breaks=seq(0, 1, 0.1)) +
-          xlab("Indicators")
+          xlab("MDGs Indicators") + 
+          scale_fill_discrete(name = "MDGs Indicators")
   })
   })
 
