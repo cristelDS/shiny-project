@@ -2,6 +2,8 @@
 #date created: 14 Oct 2017
 
 library(shiny)
+library(tidyverse)
+library(readr)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -11,7 +13,7 @@ shinyServer(function(input, output) {
   output$now <- renderText(paste("This page was last updated on ", modified_date))
   
   #import data 
-  dat <- read_csv("dataMdg.csv")
+  dat <- read_csv("~/GitHub/shiny-project/MDGproject/dataMdg.csv")
   
   #plot data 
   output$myplot <- renderPlot({
